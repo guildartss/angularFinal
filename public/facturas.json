@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "cliente": "María López",
+    "fecha": "2025-11-10",
+    "producto": "Arroz 1kg",
+    "total": 15
+  },
+  {
+    "id": 2,
+    "cliente": "Pedro Gómez",
+    "fecha": "2025-11-11",
+    "producto": "Aceite 1L",
+    "total": 28
+  }
+]

@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2>{{ esEdicion ? 'Editar Venta' : 'Nueva Venta' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="guardar()" class="form">
+    <input type="text" placeholder="Nombre del cliente" formControlName="cliente" class="input">
+    <input type="date" formControlName="fecha" class="input">
+    <input type="text" placeholder="Producto vendido" formControlName="producto" class="input">
+    <input type="number" placeholder="Total (Bs.)" formControlName="total" class="input" min="1">
+
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid" class="btn-save">Guardar</button>
+      <button type="button" class="btn-cancel" routerLink="/facturas">Cancelar</button>
+    </div>
+  </form>
+</div>

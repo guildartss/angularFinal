@@ -1,0 +1,10 @@
+<div class="login-container">
+  <div class="login-card">
+    <h3>Tienda de barrio</h3>
+    <form [formGroup]="form" (ngSubmit)="ingresar()">
+      <input type="text" placeholder="Usuario" formControlName="user" class="input-field">
+      <input type="password" placeholder="Contraseña" formControlName="pass" class="input-field">
+      <button type="submit" [disabled]="form.invalid" class="btn-login">Entrar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <div class="header">
+    <h2>Ventas del Día</h2>
+    <button class="btn-add" routerLink="/facturas/nueva">+ Venta</button>
+  </div>
+
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Fecha</th>
+          <th>Producto</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let f of facturas">
+          <td>{{ f.cliente }}</td>
+          <td>{{ f.fecha }}</td>
+          <td>{{ f.producto }}</td>
+          <td class="total">Bs. {{ f.total }}</td>
+          <td class="actions">
+            <button class="btn-edit" [routerLink]="['/facturas/editar', f.id]">Editar</button>
+            <button class="btn-delete" (click)="borrar(f.id)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
